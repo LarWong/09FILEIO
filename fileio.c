@@ -3,12 +3,35 @@
 #include <fcntl.h>
 #include <zconf.h>
 #include <string.h>
+#include <printf.h>
+#include <stdlib.h>
 
 int main(void) {
-    int fileint = open("text",O_APPEND);
-    if (fileint){
-        write(1, "text opened\n", sizeof(char) * strlen("text opened"));
-        
+    int fileint = open("example.txt", O_RDONLY);
+    printf("fileint: %d\n", fileint);
+    if (fileint > 0){
+        write(1, "text opened\n", sizeof(char) * strlen("text opened\n"));
+
+        char * holder = calloc(999, sizeof(char));
+        if (read(fileint, holder, 999) < 0){
+            write(2, "read error\n", sizeof(char) * strlen("read error\n"));
+        }
+        printf("this is what's in the file: %s", holder);
+
+        if (write(fileint, "henlo\n", 6) != 6) {
+            write(2, "write error\n", sizeof(char) * strlen("write error\n"));
+        }
+
+        if(close(fileint) > 0) {
+            write(1, "okay cool it closed\n", sizeof(char) * strlen("okay cool it closed\n"));
+        }
+        else{
+            write(2, "close error\n", sizeof(char) * strlen("close error\n"));
+        }
 
     }
+    else{
+        write(2, "open error\n", sizeof(char) * strlen("open error\n"));
+    }
+    return 0;
 }

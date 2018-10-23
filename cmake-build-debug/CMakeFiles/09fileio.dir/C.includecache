@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/jason/systems/09fileio/fileio.c
+fcntl.h
+-
+zconf.h
+-
+string.h
+-
+printf.h
+-
+stdlib.h
+-
+
