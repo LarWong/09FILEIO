@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/09fileio.dir/fileio.c.o"
+  "CMakeFiles/09fileio.dir/driver.c.o"
   "09fileio.pdb"
   "09fileio"
 )

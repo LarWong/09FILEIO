@@ -1,12 +1,8 @@
 
+#include "fileio.h"
 
-#include <fcntl.h>
-#include <zconf.h>
-#include <string.h>
-#include <printf.h>
-#include <stdlib.h>
 
-int main(void) {
+int test() {
     int fileint = open("example.txt", O_CREAT | O_RDWR | O_APPEND, S_IWUSR | S_IXUSR | S_IRUSR);
     printf("fileint: %d\n", fileint);
     if (fileint > 0){

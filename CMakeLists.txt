@@ -7,4 +7,4 @@ include_directories(.)
 
 add_executable(09fileio
         fileio.c
-        fileio.h)
+        fileio.h driver.c)

@@ -1,8 +1,9 @@
-all: fileio.o
-	gcc -o fileio fileio.o
+all: driver.c fileio.o
+	gcc -o testy fileio.o driver.c
+
 fileio.o: fileio.c fileio.h
 	gcc -c fileio.c fileio.h
 run:
-	./fileio
+	./testy
 clean:
 	rm ./fileio *.o *.gch

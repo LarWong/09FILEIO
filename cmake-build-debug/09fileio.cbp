@@ -80,6 +80,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/jason/systems/09fileio/driver.c">
+			<Option target="09fileio"/>
+		</Unit>
 		<Unit filename="/Users/jason/systems/09fileio/fileio.c">
 			<Option target="09fileio"/>
 		</Unit>

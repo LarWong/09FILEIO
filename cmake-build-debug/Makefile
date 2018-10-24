@@ -123,6 +123,33 @@ depend:
 	$(MAKE) -f CMakeFiles/09fileio.dir/build.make CMakeFiles/09fileio.dir/build
 .PHONY : 09fileio/fast
 
+driver.o: driver.c.o
+
+.PHONY : driver.o
+
+# target to build an object file
+driver.c.o:
+	$(MAKE) -f CMakeFiles/09fileio.dir/build.make CMakeFiles/09fileio.dir/driver.c.o
+.PHONY : driver.c.o
+
+driver.i: driver.c.i
+
+.PHONY : driver.i
+
+# target to preprocess a source file
+driver.c.i:
+	$(MAKE) -f CMakeFiles/09fileio.dir/build.make CMakeFiles/09fileio.dir/driver.c.i
+.PHONY : driver.c.i
+
+driver.s: driver.c.s
+
+.PHONY : driver.s
+
+# target to generate assembly for a file
+driver.c.s:
+	$(MAKE) -f CMakeFiles/09fileio.dir/build.make CMakeFiles/09fileio.dir/driver.c.s
+.PHONY : driver.c.s
+
 fileio.o: fileio.c.o
 
 .PHONY : fileio.o
@@ -159,6 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... 09fileio"
+	@echo "... driver.o"
+	@echo "... driver.i"
+	@echo "... driver.s"
 	@echo "... fileio.o"
 	@echo "... fileio.i"
 	@echo "... fileio.s"
